@@ -63,6 +63,13 @@ src_configure() {
 	meson_src_configure
 }
 
+src_install() {
+	dolib.so usr/lib/libalpm.so
+	dolib.so usr/lib/libalpm.so.13
+	dolib.so usr/lib/libalpm.so.13.0.1
+	meson_src_install
+}
+
 pkg_postinst() {
 
 	/usr/bin/pacman-key --init || die
