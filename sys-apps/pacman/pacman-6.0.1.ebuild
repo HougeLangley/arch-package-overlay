@@ -65,10 +65,9 @@ src_configure() {
 
 src_install() {
 	dodir /usr/$(get_libdir)/libalpm*
-	insinto /usr/lib/libalpm*
-	#dosym libalpm.so.13.0.1 /usr/lib/libalpm.so.13.0.1
-	#dosym libalpm.so.13 /usr/lib/libalpm.so.13
-	#dosym libalpm.so /usr/lib/libalpm.so
+	dosym libalpm.so.13.0.1 /usr/lib/libalpm.so.13.0.1
+	dosym libalpm.so.13 /usr/lib/libalpm.so.13
+	dosym libalpm.so /usr/lib/libalpm.so
 	meson_src_install
 }
 
