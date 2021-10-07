@@ -66,8 +66,8 @@ src_configure() {
 src_install() {
 	dodir /usr/$(get_libdir)/libalpm*
 	insinto /usr/$(get_libdir)/libalpm*
-	doins "${S}"/usr/lib/
-	#insinto /usr/lib
+	#doins "${S}"/usr/lib/
+	insinto /usr/lib
 	#dosym libalpm.so.13.0.1 /usr/lib/libalpm.so.13.0.1
 	#dosym libalpm.so.13 /usr/lib/libalpm.so.13
 	#dosym libalpm.so /usr/lib/libalpm.so
