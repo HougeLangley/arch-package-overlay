@@ -64,9 +64,9 @@ src_configure() {
 }
 
 src_install() {
-	dolib.so lib/libalpm.so
-	dolib.so lib/libalpm.so.13
-	dolib.so lib/libalpm.so.13.0.1
+	dolib.so ../${P}-build/libalpm.so
+	dolib.so ../${P}-build/libalpm.so.13
+	dolib.so ../${P}-build/libalpm.so.13.0.1
 	dosym libalpm.so /usr/lib/libalpm.so
 	dosym libalpm.so.13 /usr/lib/libalpm.so.13
 	dosym libalpm.so.13.0.1 /usr/lib/libalpm.so.13.0.1
