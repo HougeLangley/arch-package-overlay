@@ -64,9 +64,12 @@ src_configure() {
 }
 
 src_install() {
-	dolib.so usr/lib/libalpm.so
-	dolib.so usr/lib/libalpm.so.13
-	dolib.so usr/lib/libalpm.so.13.0.1
+	dolib.so usr/lib64/libalpm.so
+	dolib.so usr/lib64/libalpm.so.13
+	dolib.so usr/lib64/libalpm.so.13.0.1
+	dosym libalpm.so /usr/lib/libalpm.so
+	dosym libalpm.so.13 /usr/lib/libalpm.so.13
+	dosym libalpm.so.13.0.1 /usr/lib/libalpm.so.13.0.1
 	meson_src_install
 }
 
