@@ -50,6 +50,7 @@ RESTRICT="test"
 src_configure() {
 	local emesonargs=(
 		-Dbuildstatic=false
+		--localstatedir="${EPREFIX}/var"
 		# Help protect Gentoo users from shooting into their feet.
 		-Droot-dir="${EPREFIX}/var/chroot/archlinux"
 		# full doc with doxygen
